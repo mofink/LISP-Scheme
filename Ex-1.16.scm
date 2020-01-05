@@ -1,4 +1,4 @@
-; Design a procedure that evolves an iterative exponentiation process in logarithmic time
+; Design a procedure that evolves an iterative exponentiation process in logarithmic time 
 
 ;Solution is of the form b^n, a is an invariant that holds ab^n constant
 
