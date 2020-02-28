@@ -67,13 +67,8 @@
 
 ;Design a procedure that implements multiplication in log time. Assume double and half are built into the language
 
-(define (double x)
-    (* x 2)
-)
-
-(define (half x)
-    (/ x 2)
-)
+(define (double x) (+ x x))
+(define (half x) (/ x 2))
 
 (define (fast-mult a b)
     (cond
@@ -85,21 +80,6 @@
 
 (fast-mult 4 9)
 
-;now do it iteratively in terms of adds, halves and doubles
+;now do it iteratively in terms of adds, halves and doublesa
 
-(define (mult-aux a x y)
-    (cond
-        ((= y 0) a)
-        ((is-even y) 
-           (mult-aux a (double x) (half y)) 
-        )
-        (else (mult-aux (+ a x) x (- y 1)))
-    )
-)
 
-(define (mult-iter x y)
-    (mult-aux 0 x y)
-)
-
-(mult-iter 5 4)
-(mult-iter 4 4)
